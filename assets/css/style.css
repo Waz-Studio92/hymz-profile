@@ -36,11 +36,13 @@ main {
     width: 100%;
 }
 
-/* ====================
 
-    section
 
-==================== */
+/* -----------------
+
+header
+
+------------------ */
 
 .header {
     background-color: #fff;
@@ -196,13 +198,53 @@ main {
     width: 25%;
 }
 
+/* ====================
+
+    section
+
+==================== */
+
 .content {
+    width: 100%;
+    height: auto;
+    align-items: stretch;
+}
+
+
+.content-box {
+    background-color: #000;
+}
+
+.link-block {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+}
+
+.link-btn {
+    display: flex;
+    flex-direction: row;
+    background-color: #000;
+    text-decoration: none;
+    align-items: center;
+    width: 100px;
+    gap: 0;
+}
+
+.link-btn img {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+.link-txt {
 
 }
 
+
+
 /* -----------
 
-    footer
+footer
 
 ------------ */
 
@@ -261,21 +303,31 @@ main {
 
 @media screen and (min-width:768px) {
 
-    .nav_toggle:checked~.nav_list {
+    /* --------------------
+
+        header
+
+    --------------------- */
+
+    .nav-toggle:checked~.nav-list {
         transform: none;
         opacity: 1;
     }
 
-    .nav_overlay,
-    .nav_toggle:checked~.nav_overlay {
+    .nav-overlay,
+    .nav-toggle:checked~.nav-overlay {
         display: none;
     }
 
-    .nav_btn {
+    .nav-btn {
         display: none;
     }
 
-    .nav_list {
+    .nav-btn span {
+        display: none;
+    }
+
+    .nav-list {
         position: static;
         width: 100%;
         max-width: none;
@@ -284,12 +336,71 @@ main {
         transform: none;
         pointer-events: auto;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         visibility: visible;
         background: transparent;
-        gap: 2em;
+        gap: 1em;
         padding: 0;
+        margin: 2em 0 0 2em;
     }
+
+    /* ========================
+
+        section
+
+    ========================= */
+
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid rgba(0, 0, 0, .2);
+    }
+
+    .content-box {
+    }
+
+    .link-block {
+        display: block;
+    }
+
+    .link-btn {
+        display: flex;
+        text-decoration: row;
+        align-items: center;
+        width: 100px;
+        gap: 3em;
+        padding: 20px;
+        border-radius: 50px;
+        transition: .4s ease;
+    }
+
+    .link-btn:hover {
+        background-color: #00acee;
+    }
+
+    .link-btn img {
+        display: block;
+        width: 15px;
+        height: 15px;
+    }
+
+    .link-txt {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    /* ------------------ 
+
+        footer
+
+    ------------------- */
 
     .footer {
         background-color: #fff;
@@ -302,22 +413,16 @@ main {
         text-align: center;
     }
 
-    .footer img  {
-        
-    }
+    /* .footer img  {} 現状触らない */
 
     .foot-list {
         display: flex;
         flex-direction: row;
     }
 
-    .foot-item {
-        
-    }
+    /* .foot-item {} 現状触らない */
 
-    .foot-link {
-        
-    }
+    /* .foot-link {} 現状触らない */
 
 }
 
