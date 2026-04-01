@@ -50,6 +50,7 @@ main {
     margin: 0 auto;
     box-shadow: 0 14px 20px rgba(0, 0, 0, .14);
     align-items: center;
+    z-index: 100;
 }
 
 .header img {
@@ -79,24 +80,91 @@ main {
     border-radius: 5px;
     margin: 30px 0 30px 30px;
     transition: .4s ease;
+    position: relative;
 }
 
 .nav-btn:hover,
 .nav-btn:focus {
-    background-color: rgb(14, 122, 104);
+    background-color: hsl(177, 100%, 55%);
 }
 
 .nav-btn span {
+    position: absolute;
+    background-color: #000;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    transition: .25s ease;
+}
 
+.nav-btn span:nth-child(1) {
+    top: 14px;
+}
+
+.nav-btn span:nth-child(2) {
+    top: 21px;
+}
+
+.nav-btn span:nth-child(3) {
+    top: 28px;
+}
+
+.nav-toggle:checked + .nav-btn span:nth-child(1) {
+    top: 21px;
+    transform: rotate(45deg);
+}
+
+.nav-toggle:checked + .nav-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle:checked + .nav-btn span:nth-child(3) {
+    top: 21px;
+    transform: rotate(-45deg);
 }
 
 .nav-overlay {
-
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .2);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .25s;
+    z-index: 200;
 }
 
+.nav-toggle:checked ~ .nav-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
 
 .nav-list {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding: 1em 0;
+    top: 72px;
+    right: 0;
+    bottom: 0;
+    gap: 0;
+    width: 50%;
+    max-width: 420px;
+    list-style: none;
+    transform: scaleX(0);
+    transform-origin: right;
+    pointer-events: none;
+    transition: opacity .25s ease, transform .25s ease;
+    opacity: 0;
+    z-index: 400;
+}
 
+.nav-toggle:checked ~ .nav-list {
+    opacity: 1;
+    transform: scaleX(1);
+    pointer-events: auto;
+    transition-delay: .15s;
 }
 
 .nav-list a {
