@@ -212,7 +212,6 @@ header
 
 
 .content-box {
-    background-color: #000;
 }
 
 .link-block {
@@ -230,7 +229,7 @@ header
     gap: 0;
 }
 
-.link-btn img {
+.link-img {
     display: block;
     width: 100px;
     height: 100px;
@@ -373,21 +372,46 @@ footer
         display: flex;
         text-decoration: row;
         align-items: center;
-        width: 100px;
-        gap: 3em;
-        padding: 20px;
+        width: 120px;
+        gap: 2em;
+        padding: 10px 30px;
         border-radius: 50px;
-        transition: .4s ease;
+        transition: background-color .4s ease;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
     }
 
-    .link-btn:hover {
-        background-color: #00acee;
+    .link-btn::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: #fff;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .4s ease;
     }
 
-    .link-btn img {
+    .link-btn:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    .link-btn:not(:hover)::after {
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+
+    .link-img {
         display: block;
         width: 15px;
         height: 15px;
+        z-index: 2;
+    }
+
+    .link-btn:hover .link-img {
+        filter: brightness(0) invert(1);
     }
 
     .link-txt {
