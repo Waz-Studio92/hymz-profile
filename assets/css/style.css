@@ -117,16 +117,16 @@ header
     top: 28px;
 }
 
-.nav-toggle:checked + .nav-btn span:nth-child(1) {
+.nav-toggle:checked+.nav-btn span:nth-child(1) {
     top: 21px;
     transform: rotate(45deg);
 }
 
-.nav-toggle:checked + .nav-btn span:nth-child(2) {
+.nav-toggle:checked+.nav-btn span:nth-child(2) {
     opacity: 0;
 }
 
-.nav-toggle:checked + .nav-btn span:nth-child(3) {
+.nav-toggle:checked+.nav-btn span:nth-child(3) {
     top: 21px;
     transform: rotate(-45deg);
 }
@@ -141,7 +141,7 @@ header
     z-index: 200;
 }
 
-.nav-toggle:checked ~ .nav-overlay {
+.nav-toggle:checked~.nav-overlay {
     opacity: 1;
     pointer-events: auto;
 }
@@ -168,7 +168,7 @@ header
     z-index: 400;
 }
 
-.nav-toggle:checked ~ .nav-list {
+.nav-toggle:checked~.nav-list {
     opacity: 1;
     transform: scaleX(1);
     pointer-events: auto;
@@ -203,6 +203,86 @@ header
     width: 25%;
 }
 
+@media screen and (min-width:768px) {
+
+    /* --------------------
+
+        header
+
+    --------------------- */
+
+    .nav-toggle:checked~.nav-list {
+        transform: none;
+        opacity: 1;
+    }
+
+    .nav-overlay,
+    .nav-toggle:checked~.nav-overlay {
+        display: none;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .nav-btn span {
+        display: none;
+    }
+
+    .nav-list {
+        position: static;
+        width: 100%;
+        max-width: none;
+        height: auto;
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+        display: flex;
+        flex-direction: column;
+        visibility: visible;
+        background: transparent;
+        gap: 1em;
+        padding: 0;
+        margin: 2em 0 0 2em;
+    }
+
+    .nav-toggle:checked~.nav-list {
+        opacity: 1;
+        transform: scaleX(1);
+        pointer-events: auto;
+        transition-delay: .15s;
+    }
+
+    .nav-list li {
+        padding-bottom: 1em;
+    }
+
+    .nav-list a {
+        display: block;
+        color: #333;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 900;
+        position: relative;
+    }
+
+    .nav-list a::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        left: 0;
+        bottom: -2px;
+        height: 1px;
+        background-color: currentColor;
+        transition: width .3s ease;
+    }
+
+    .nav-list a:hover::after {
+        width: 25%;
+    }
+
+}
+
 /* ====================
 
     SECTION
@@ -226,8 +306,46 @@ header
     align-items: stretch;
 }
 
-section {
-    
+.section-title {
+    font-family: arial;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+@media screen and (min-width:768px) {
+
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        border-right: 1px solid rgba(0, 0, 0, .2);
+        height: auto;
+        align-items: stretch;
+        position: sticky;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 0 1em;
+        align-items: stretch;
+    }
+
+    .section-title {
+        font-family: arial;
+        font-size: 30px;
+        font-weight: 900;
+    }
+
 }
 
 /* -------------
@@ -236,7 +354,9 @@ section {
 
 -------------- */
 
-
+@media screen and (min-width:768px) {
+    
+}
 
 /* --------------
 
@@ -276,8 +396,7 @@ section {
 
 .name-block {
     text-align: left;
-    margin: 2rem auto;
-    padding: 0 0 2.2rem 0;
+    margin: 1.25rem auto;
     width: fit-content;
 }
 
@@ -309,20 +428,30 @@ section {
     white-space: nowrap;
 }
 
+.section-border {
+    display: block;
+    border-bottom: 2px solid #333;
+    margin-bottom: 1.25rem;
+}
+
 .catch {
     text-align: left;
     width: fit-content;
     margin: 0 auto 2em;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .pr-txt {
     white-space: wrap;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 
 .link-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     justify-content: center;
     gap: 2rem 2.4rem;
     width: 80%;
@@ -392,6 +521,105 @@ section {
     color: #333;
 }
 
+@media screen and (min-width:768px) {
+
+    /* ====================
+
+        SECTION
+
+    ==================== */
+
+    
+    /* -------------
+
+    TOP
+
+-------------- */
+
+
+
+    /* --------------
+
+    PROFILE
+
+--------------- */
+
+    .pr-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .section-title {
+        text-align: center;
+        margin: 0 auto 2rem;
+    }
+
+    .pr-table {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .character-img {
+        display: block;
+        width: 250px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .pr-caption {
+        width: 100%;
+    }
+
+    .name-block {
+        text-align: left;
+        margin: 1.25rem auto;
+        width: fit-content;
+    }
+
+    .pr-name {
+        text-align: left;
+        display: inline-block;
+    }
+
+    .parent-sub-name-block {
+        display: flex;
+        gap: 1rem;
+        width: fit-content;
+    }
+
+    .parent-sub-name-block p {
+        font-weight: 600;
+        width: fit-content;
+        white-space: nowrap;
+    }
+
+    .section-border {
+        display: block;
+        border-bottom: 2px solid #333;
+        margin-bottom: 1.25rem;
+    }
+
+    .catch {
+        text-align: left;
+        width: fit-content;
+        margin: 0 auto 2em;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .pr-txt {
+        white-space: wrap;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+
+}
+
 /* ----------------
 
     WORKS
@@ -399,7 +627,9 @@ section {
 ----------------- */
 
 
-
+@media screen and (min-width:768px) {
+    
+}
 
 /* ---------------
 
@@ -407,9 +637,9 @@ section {
 
 ---------------- */
 
-
-
-
+@media screen and (min-width:768px) {
+    
+}
 
 /* ================
 
@@ -417,11 +647,11 @@ section {
 
 ================= */
 
-/* -----------
+/* ----------------
 
 footer
 
------------- */
+------------------ */
 
 .footer {
     display: flex;
@@ -439,12 +669,11 @@ footer
     margin: 0 auto 2em;
 }
 
-.footer nav {
-}
+.footer nav {}
 
 .foot-list {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     list-style: none;
     gap: 1em;
     width: 70%;
@@ -476,131 +705,14 @@ footer
     width: 100%;
 }
 
-/* ===================
-
-    media query
-
-==================== */
 
 @media screen and (min-width:768px) {
-
-    /* --------------------
-
-        header
-
-    --------------------- */
-
-    .nav-toggle:checked~.nav-list {
-        transform: none;
-        opacity: 1;
-    }
-
-    .nav-overlay,
-    .nav-toggle:checked~.nav-overlay {
-        display: none;
-    }
-
-    .nav-btn {
-        display: none;
-    }
-
-    .nav-btn span {
-        display: none;
-    }
-
-    .nav-list {
-        position: static;
-        width: 100%;
-        max-width: none;
-        height: auto;
-        opacity: 1;
-        transform: none;
-        pointer-events: auto;
-        display: flex;
-        flex-direction: column;
-        visibility: visible;
-        background: transparent;
-        gap: 1em;
-        padding: 0;
-        margin: 2em 0 0 2em;
-    }
-
-    /* ========================
-
-        section
-
-    ========================= */
     
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
+    /* -------------------
     
-    .sidebar {
-        width: 250px;
-        display: flex;
-        flex-direction: column;
-        top: 20%;
-        left: 0;
-    }
-
-    /* ----------------
-
-        TOP
-
-    ----------------- */
-    
-    
-    
-    /* ----------------
-
-        PROFILE
-
-    ----------------- */
-    
-    .pr-table {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .name-block {
-        margin: 0;
-
-    }
-
-    .catch {
-        margin: 0;
-    }
-
-
-
-
-
-
-
-
-
-    /* ----------------
-
-        WORKS
-
-    ----------------- */
-    
-    
-    
-    /* ----------------
-
-        LINK
-
-    ----------------- */
-    
-    
-    /* ------------------ 
-
         footer
-
-    ------------------- */
+    
+    -------------------- */
 
     .footer {
         background-color: #fff;
@@ -628,6 +740,68 @@ footer
 
 }
 
-@media screen and (min-width:1024px) {
+
+
+
+
+
+/* ===================
+
+    media query
+
+==================== */
+
+@media screen and (min-width:768px) {
+
+    /* ----------------
+
+        PROFILE
+
+    ----------------- */
+
+    .pr-table {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .name-block {
+        margin: 0;
+
+    }
+
+    .catch {
+        margin: 0;
+    }
+
+
+
+
+
+
+
+
+
+    /* ----------------
+
+        WORKS
+
+    ----------------- */
+
+
+
+    /* ----------------
+
+        LINK
+
+    ----------------- */
+
+
+    /* ------------------ 
+
+        footer
+
+    ------------------- */
+
     
+
 }
