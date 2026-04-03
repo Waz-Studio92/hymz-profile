@@ -32,7 +32,7 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    margin: 72px auto 0;
+    /* margin: 72px auto 0; */
     width: 100%;
 }
 
@@ -291,6 +291,7 @@ header
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
     padding: 50px 0;
     width: 100%;
 }
@@ -313,20 +314,20 @@ header
 @media screen and (min-width:865px) {
 
     .container {
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
     }
 
     .sidebar {
         width: 250px;
         display: flex;
         flex-direction: column;
-        top: 0;
+        top: 67px;
         left: 0;
         border-right: 1px solid rgba(0, 0, 0, .2);
-        height: auto;
-        align-items: stretch;
+        height: fit-content;
         position: sticky;
+        align-self: flex-start;
     }
 
     .content {
@@ -352,7 +353,7 @@ header
 
 -------------- */
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:865px) {
     
 }
 
@@ -546,7 +547,7 @@ header
 
 .content-txt {
     font-weight: 700;
-    margin-bottom: 1.25rem;
+    margin-bottom: .5rem;
 }
 
 .tags {
@@ -587,14 +588,16 @@ header
 
 .content-list p {
     list-style: none;
-    margin: 1.25rem 0;
-    border-bottom: 1px solid #333;
-    padding-bottom: 1.25rem;
 }
 
 .content-item-small {
     display: flex;
     align-items: center;
+}
+
+.content-item-small:last-child {
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #333;
 }
 
 .content-item-small p {
@@ -621,7 +624,6 @@ header
 .content-item-small a:hover::after {
     width: 100%;
 }
-
 
 @media screen and (min-width:865px) {
 
@@ -730,7 +732,7 @@ header
 ----------------- */
 
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:865px) {
     
 }
 
@@ -740,7 +742,7 @@ header
 
 ---------------- */
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:865px) {
     
 }
 
