@@ -36,8 +36,6 @@ main {
     width: 100%;
 }
 
-
-
 /* -----------------
 
 header
@@ -203,7 +201,7 @@ header
     width: 25%;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:865px) {
 
     /* --------------------
 
@@ -312,7 +310,7 @@ header
     font-weight: 900;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:865px) {
 
     .container {
         display: flex;
@@ -403,6 +401,7 @@ header
 .pr-name {
     text-align: left;
     display: inline-block;
+    font-size: 20px;
 }
 
 .parent-sub-name-block {
@@ -457,7 +456,7 @@ header
     width: 80%;
     max-width: 700px;
     margin: 2rem auto 0;
-    padding: 0 2rem 0 0;
+    padding: 0 2rem 0 ;
 }
 
 .link-btn {
@@ -521,35 +520,124 @@ header
     color: #333;
 }
 
-@media screen and (min-width:768px) {
+/* ---------------
 
-    /* ====================
+    DETAIL
 
-        SECTION
+---------------- */
 
-    ==================== */
+.content-header {
+    width: 100%;
+    margin: 2rem auto 0;
+    padding: 0 1rem;
+    text-align: left;
+}
 
-    
-    /* -------------
+.content-title {
+    font-family: arial;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1.25rem;
+}
 
-    TOP
+.content-container {
+    margin: 0 auto 0;
+    padding: 0 1rem;
+}
 
--------------- */
+.content-txt {
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.tags {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.content-list {
+    list-style: none;
+    margin: 1.25rem 0;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1.25rem;
+}
+
+.content-list span a {
+    text-decoration: none;
+    color: #333;
+    position: relative;
+}
+
+.content-list span a::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -2px;
+    height: 1px;
+    background-color: currentColor;
+    transition: width .3s ease;
+}
+
+.content-list span a:hover::after {
+    width: 100%;
+}
+
+.content-list p {
+    list-style: none;
+    margin: 1.25rem 0;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1.25rem;
+}
+
+.content-item-small {
+    display: flex;
+    align-items: center;
+}
+
+.content-item-small p {
+    width: 100%;
+}
+
+.content-item-small a {
+    color: #333;
+    text-decoration: none;
+    position: relative;
+}
+
+.content-item-small a::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -2px;
+    height: 1px;
+    background-color: currentColor;
+    transition: width .3s ease;
+}
+
+.content-item-small a:hover::after {
+    width: 100%;
+}
 
 
+@media screen and (min-width:865px) {
 
     /* --------------
 
-    PROFILE
+        PROFILE
 
---------------- */
+    --------------- */
 
     .pr-container {
         display: flex;
         flex-direction: column;
         text-align: center;
         margin: 0 auto;
-        width: 100%;
+        padding: 0 1rem;
+        width: fit-content;
     }
 
     .section-title {
@@ -557,9 +645,27 @@ header
         margin: 0 auto 2rem;
     }
 
+    .pr-caption {
+        margin-left: 1.25rem;
+    }
+
+    .name-block {
+        text-align: left;
+        margin: 0 0 1.25rem;
+        width: fit-content;
+    }
+
+    .catch {
+        text-align: left;
+        width: fit-content;
+        margin: 0 0 1.25rem;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
     .pr-table {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         margin: 0 auto;
     }
 
@@ -574,10 +680,11 @@ header
         width: 100%;
     }
 
-    .name-block {
-        text-align: left;
-        margin: 1.25rem auto;
+    .parent-sub-name-block {
+        display: flex;
+        gap: 1rem;
         width: fit-content;
+        margin-top: 10px;
     }
 
     .pr-name {
@@ -585,30 +692,19 @@ header
         display: inline-block;
     }
 
-    .parent-sub-name-block {
-        display: flex;
-        gap: 1rem;
-        width: fit-content;
-    }
-
     .parent-sub-name-block p {
-        font-weight: 600;
         width: fit-content;
         white-space: nowrap;
+        font-size: 14px;
+        font-weight: 700;
+        font-family: arial;
     }
 
     .section-border {
         display: block;
         border-bottom: 2px solid #333;
         margin-bottom: 1.25rem;
-    }
-
-    .catch {
-        text-align: left;
-        width: fit-content;
-        margin: 0 auto 2em;
-        font-size: 18px;
-        font-weight: 700;
+        width: 100%;
     }
 
     .pr-txt {
@@ -617,6 +713,13 @@ header
         font-weight: 500;
     }
 
+    .link-container {
+        margin: 2rem 0 0 1rem;
+    }
+
+    #detail {
+        width: 90%;
+    }
 
 }
 
@@ -640,12 +743,6 @@ header
 @media screen and (min-width:768px) {
     
 }
-
-/* ================
-
-    / SECTION
-
-================= */
 
 /* ----------------
 
@@ -737,71 +834,5 @@ footer
     /* .foot-item {} 現状触らない */
 
     /* .foot-link {} 現状触らない */
-
-}
-
-
-
-
-
-
-/* ===================
-
-    media query
-
-==================== */
-
-@media screen and (min-width:768px) {
-
-    /* ----------------
-
-        PROFILE
-
-    ----------------- */
-
-    .pr-table {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .name-block {
-        margin: 0;
-
-    }
-
-    .catch {
-        margin: 0;
-    }
-
-
-
-
-
-
-
-
-
-    /* ----------------
-
-        WORKS
-
-    ----------------- */
-
-
-
-    /* ----------------
-
-        LINK
-
-    ----------------- */
-
-
-    /* ------------------ 
-
-        footer
-
-    ------------------- */
-
-    
 
 }
