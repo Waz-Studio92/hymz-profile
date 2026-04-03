@@ -731,27 +731,58 @@ header
         width: 90%;
     }
 
+    iframe {
+        border: none;
+    }
+
 }
 
 /* ----------------
 
-    WORKS
+    PICK UP
 
 ----------------- */
 
-
-@media screen and (min-width:865px) {
-    
+.pick-grid,
+.arc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 1.2em;
+    align-items: stretch;
 }
 
-/* ---------------
+.grid-item {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    padding: 20px 0;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 14px 20px rgba(0, 0, 0, .14);
+}
 
-    LINK
+iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
 
----------------- */
+.work-title {
+    margin: 10px auto;
+    text-align: center;
+}
 
 @media screen and (min-width:865px) {
-    
+    .pick-grid,
+    .arc-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+        gap: 3em;
+        align-items: stretch;
+    }
 }
 
 /* ----------------
@@ -839,10 +870,11 @@ footer
     .foot-list {
         display: flex;
         flex-direction: row;
+        gap: 2em;
     }
 
-    /* .foot-item {} 現状触らない */
+}
 
-    /* .foot-link {} 現状触らない */
-
+@media screen  {
+    
 }
