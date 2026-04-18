@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    display: block;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-black: #000;
+    --bg-white: #fff;
+    --text-color: #333;
+    --sub-color: #fff;
+    --border-black: #000;
+    --border-color: #333;
+    --main-shadow-color: rgba(0, 0, 0, .14);
+    --sub-shadow-color: rgba(0, 0, 0, .2);
+}
+
+body {
+    display: block;
+    min-width: 320px;
+    font-family: 'Noto Sans JP', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", "sans-serif";
+    font-size: 15px;
+    color: #333;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    /* margin: 72px auto 0; */
+    width: 100%;
+}
+
+a,img,span {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
