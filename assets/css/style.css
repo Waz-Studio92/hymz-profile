@@ -483,9 +483,24 @@ header
 .pick-grid,
 .arc-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
     gap: 1.2em;
     align-items: stretch;
+    padding-right: 1rem;
+}
+
+.pick-txt-block,
+.pick-para {
+    width: fit-content;
+}
+
+.pick-txt-block {
+    text-align: left;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+
+.pick-para {
 }
 
 .grid-item {
@@ -498,6 +513,12 @@ header
     height: auto;
     border-radius: 12px;
     box-shadow: 0 14px 20px rgba(0, 0, 0, .14);
+    transform: scale(1);
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    transition: .1s ease;
 }
 
 iframe {
@@ -520,7 +541,7 @@ iframe {
 
 .news-block {
     width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto 2rem;
 }
 
 .news-flex  {
