@@ -40,12 +40,6 @@ header
     height: auto;
 }
 
-.container {
-    display: flex;
-    min-height: 100vh;
-    position: relative;
-}
-
 /* ====================
 
     SECTION
@@ -53,8 +47,8 @@ header
 ==================== */
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     margin-top: 80px;
     min-height: 100vh;
 }
@@ -62,7 +56,7 @@ header
 .content {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     width: 100%;
     height: auto;
     margin: 0 auto;
@@ -86,7 +80,7 @@ header
     font-size: 30px;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:820px) {
 
     .container {
         display: grid;
@@ -109,7 +103,7 @@ header
 .pr-container {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     margin: 0 auto;
     width: 100%;
 }
@@ -132,6 +126,7 @@ header
 }
 
 .pr-caption {
+    text-align: left;
     width: 100%;
 }
 
@@ -383,7 +378,7 @@ header
     transform-origin: left;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:800px) {
 
     /* --------------
 
@@ -466,7 +461,7 @@ header
     }
 
     .link-container {
-        margin: 2rem 0 0 1rem;
+        margin: 2rem auto;
     }
 
     #detail {
@@ -488,7 +483,7 @@ header
 .pick-grid,
 .arc-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     gap: 1.2em;
     align-items: stretch;
 }
@@ -523,6 +518,11 @@ iframe {
 
 ------------------- */
 
+.news-block {
+    width: fit-content;
+    margin: 0 auto;
+}
+
 .news-flex  {
     display: flex;
     flex-direction: row;
@@ -530,6 +530,7 @@ iframe {
     color: var(--text-color);
     align-items: center;
     justify-content: center;
+    width: fit-content;
     margin: 0;
     padding-bottom: 2rem;
     text-align: left;
@@ -598,15 +599,7 @@ time {
     display: none;
 }
 
-@media screen and (min-width:768px) {
-
-    .pick-grid,
-    .arc-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-        gap: 3em;
-        align-items: stretch;
-    }
+@media screen and (min-width:820px) {
 
     .news-flex {
         justify-content: start;

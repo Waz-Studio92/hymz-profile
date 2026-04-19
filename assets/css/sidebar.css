@@ -136,7 +136,7 @@
     transform-origin: left;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:820px) {
 
     .sidebar {
         position: sticky;
