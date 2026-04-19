@@ -85,11 +85,11 @@ header
     font-size: 30px;
 }
 
-@media screen and (min-width:865px) {
+@media screen and (min-width:768px) {
 
     .container {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 200px 2fr;
     }
 
     .content {
@@ -207,7 +207,7 @@ header
 
 .link-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     justify-content: center;
     gap: 2rem 2.4rem;
     width: 80%;
@@ -387,7 +387,7 @@ header
     transform-origin: left;
 }
 
-@media screen and (min-width:865px) {
+@media screen and (min-width:768px) {
 
     /* --------------
 
@@ -602,7 +602,7 @@ time {
     display: none;
 }
 
-@media screen and (min-width:865px) {
+@media screen and (min-width:768px) {
 
     .pick-grid,
     .arc-grid {

@@ -136,17 +136,14 @@
     transform-origin: left;
 }
 
-@media screen and (min-width:865px) {
+@media screen and (min-width:768px) {
 
     .sidebar {
-        width: 250px;
-        display: flex;
-        flex-direction: column;
-        top: 67px;
-        left: 0;
-        height: fit-content;
         position: sticky;
-        align-self: flex-start;
+        width: 200px;
+        height: fit-content;
+        top: 90px;
+        align-self: start;
     }
 
     .nav-toggle:checked~.nav-list {
