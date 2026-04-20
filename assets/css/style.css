@@ -277,7 +277,6 @@ header
 .content-header {
     width: 100%;
     margin: 2rem auto 0;
-    padding: 0 1rem;
     text-align: left;
 }
 
@@ -291,7 +290,6 @@ header
 
 .content-container {
     margin: 0 auto 0;
-    padding: 0 1rem;
 }
 
 .content-txt {
@@ -483,10 +481,10 @@ header
 .pick-grid,
 .arc-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
     gap: 1.2em;
     align-items: stretch;
-    padding-right: 1rem;
+    width: 100%;
 }
 
 .pick-txt-block,
@@ -507,7 +505,8 @@ header
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    margin: 20px auto;
+    justify-content: center;
+    margin: 20px 0;
     padding: 20px 0;
     width: 100%;
     height: auto;
@@ -531,6 +530,16 @@ iframe {
 .work-title {
     margin: 10px auto;
     text-align: center;
+}
+
+@media screen and (max-width:370px) {
+    
+    .pick-grid,
+    .arc-grid,
+    .grid-item {
+        width: 80%;
+    }
+
 }
 
 /* ------------------
