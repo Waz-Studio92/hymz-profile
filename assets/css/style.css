@@ -532,12 +532,12 @@ iframe {
     text-align: center;
 }
 
-@media screen and (max-width:370px) {
+@media screen and (max-width:380px) {
     
     .pick-grid,
-    .arc-grid,
-    .grid-item {
-        width: 80%;
+    .arc-grid {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
     }
 
 }
