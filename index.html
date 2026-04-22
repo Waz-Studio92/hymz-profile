@@ -11,12 +11,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+
+            const target = document.querySelector('body');
+            
+            target.classList.add('is-active');
+        
+        });
+    </script>
+
 </head>
 
 <body class="fade">
     <header class="header">
         <a href="index.html">
-            <img src="assets/images/hymz-logo.png" alt="速水らいむロゴ">
+            <img src="assets/images/hymz-logo-mini.svg" alt="速水らいむロゴ">
         </a>
     </header>
     <div class="container">
@@ -319,6 +330,7 @@
     <div id="footer"></div>
 
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/frame.js"></script>
 
 </body>
 
