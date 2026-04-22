@@ -36,7 +36,7 @@ header
 }
 
 .header img {
-    width: 180px;
+    width: 150px;
     height: auto;
 }
 
@@ -45,6 +45,17 @@ header
     SECTION
 
 ==================== */
+
+.fade {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s ease;
+}
+
+.fade.is-active {
+    opacity: 1;
+    visibility: visible;
+}
 
 .container {
     display: flex;
@@ -478,6 +489,29 @@ header
 
 ------------------------ */
 
+#pick-up,
+#songs,
+#news {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+#songs {
+    transition-delay: .2s;
+}
+
+#news {
+    transition-delay: .4s;
+}
+
+#pick-up.is-active,
+#songs.is-active,
+#news.is-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .pick-grid,
 .arc-grid {
     display: grid;
@@ -496,9 +530,6 @@ header
     text-align: left;
     margin: 0 auto;
     padding-top: 1rem;
-}
-
-.pick-para {
 }
 
 .grid-item {
