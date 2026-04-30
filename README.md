@@ -7,4 +7,4 @@
 ## 使用技術
 - HTML5 / CSS3
 - JavaScript (AI-assisted)
-- Netlify (Hosting)
+- vercel (Hosting)
