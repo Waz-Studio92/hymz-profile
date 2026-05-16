@@ -10,6 +10,7 @@ function createContent(item) {
     if (className) el.className = className;
     if (htmlFor) el.htmlFor = htmlFor;
     if (type) el.type = type;
+    if (href) el.href = href;
     
     // テキストがあれば挿入
     if(text) el.textContent = text;
