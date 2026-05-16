@@ -4,9 +4,12 @@ function createContent(item) {
     const el = document.createElement(tag);
 
     Object.assign(el, attrs);
-    // class: classNameに変換
+    if (id) el.id = id;
+    // jsにおいてclassやforは仕様上使い回されるオブジェクトであるため 
+    // class: classNameに変換 / for: htmlForに変換
     if (className) el.className = className;
     if (htmlFor) el.htmlFor = htmlFor;
+    if (type) el.type = type;
     
     // テキストがあれば挿入
     if(text) el.textContent = text;
