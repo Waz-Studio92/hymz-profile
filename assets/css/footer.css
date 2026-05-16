@@ -4,9 +4,9 @@
 
 .footer img {
     display: block;
+    margin: 0 auto 2em;
     width: 180px;
     height: auto;
-    margin: 0 auto 2em;
 }
 
 .footer nav {
@@ -67,7 +67,7 @@
 
     .footer a img {
         margin-bottom: 0;
-        padding-right: 3rem;
+        padding-right: 0;
     }
 
     .footer nav {
