@@ -17,7 +17,12 @@ html {
 :root {
     --bg-black: #000;
     --bg-white: #fff;
-    --text-color: #333;
+    --default-height: 72px;    
+    --default-font-family:
+    'Noto Sans JP', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", "sans-serif";
+    ;
+    --default-font-size: 15px;    
+    --txt-color: #333;
     --sub-color: #fff;
     --border-black: #000;
     --border-color: #333;
@@ -28,16 +33,16 @@ html {
 body {
     display: block;
     min-width: 320px;
-    font-family: 'Noto Sans JP', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", "sans-serif";
-    font-size: 15px;
-    color: #333;
+    font-family: var(--default-font-family);
+    font-size: var(--default-font-size);
+    color: var(--txt-color);
     margin: 0;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    margin: 72px auto 0;
+    margin: var(--default-height) auto 0;
     width: 100%;
 }
 
@@ -47,5 +52,5 @@ a,img,span {
 
 a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--txt-color);
 }
