@@ -304,8 +304,17 @@ header
 }
 
 .content-txt {
+    width: fit-content;
     font-weight: 700;
     margin-bottom: .5rem;
+}
+
+.nav-item span {
+    width: fit-content;
+}
+
+.nav-item span a {
+    width: fit-content;
 }
 
 .tags {
