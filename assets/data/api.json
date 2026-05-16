@@ -1,7 +1,9 @@
 {
     "parts": [
-        {"id": "#sidebar", "callback": "setNav"},
-        {"id": "footer", "callback": "null"}
+        {"id": "#sidebar", "dataKey": "sideContent", "callback": "setNav"},
+        {"id": "#footer", "dataKey": "footContent", "callback": "null"},
+        {"id": "#profile", "dataKey": "profileContent", "callback": "null"},
+        {"id": "#detail", "dataKey": "detailContent", "callback": "null"}
     ],
     "sideContent": [
         {"tag": "nav", "class": "sidebar", "children": [
@@ -12,54 +14,163 @@
             {"tag": "label", "for": "nav-toggle", "class": "nav-overlay"},
             {"tag": "ul", "class": "nav-list", "children": [
                 {"tag": "li", "class": "nav-item", "children": [
-                    {"tag": "a", "class": "nav-link", "href": "#top"}
+                    {"tag": "a", "class": "nav-link", "href": "#top", "text": "TOP"}
                 ]},
                 {"tag": "li", "class": "nav-item", "children": [
-                    {"tag": "a", "class": "nav-link", "href": "#profile"}
+                    {"tag": "a", "class": "nav-link", "href": "#profile", "text": "PROFILE"}
                 ]},
                 {"tag": "li", "class": "nav-item", "children": [
-                    {"tag": "a", "class": "nav-link", "href": "#pick-up"}
+                    {"tag": "a", "class": "nav-link", "href": "#pick-up", "text": "PICK UP"}
                 ]},
                 {"tag": "li", "class": "nav-item", "children": [
-                    {"tag": "a", "class": "nav-link", "href": "#songs"}
+                    {"tag": "a", "class": "nav-link", "href": "#songs", "text": "SONGS"}
                 ]},
                 {"tag": "li", "class": "nav-item", "children": [
-                    {"tag": "a", "class": "nav-link", "href": "#news"}
+                    {"tag": "a", "class": "nav-link", "href": "#news", "text": "NEWS"}
                 ]},
                 {"tag": "li", "class": "nav-item", "children": [
-                    {"tag": "a", "class": "nav-link", "href": "#contact"}
+                    {"tag": "a", "class": "nav-link", "href": "#contact", "text": "CONTACT"}
                 ]}
             ]}
         ]}
     ],
-    "footerContent": [
+    "footContent": [
         {"tag": "footer", "class": "footer", "children": [
-            {"tag": "a", "class": "foot-top-link", "children": [
+            {"tag": "a", "class": "foot-top-link", "href": "index.html", "children": [
                 {"tag": "img", "src": "assets/images/hymz-logo-mini.svg", "alt": "速水らいむロゴ"}
             ]},
             {"tag": "nav", "children": [
-                {"tag": "ul", "class": "nav-list", "children": [
-                    {"tag": "li", "class": "nav-item", "children": [
-                        {"tag": "a", "class": "nav-link", "href": "#top"}
+                {"tag": "ul", "class": "foot-list", "children": [
+                    {"tag": "li", "class": "foot-item", "children": [
+                        {"tag": "a", "class": "foot-link", "href": "#top", "text": "TOP"}
                     ]},
-                    {"tag": "li", "class": "nav-item", "children": [
-                        {"tag": "a", "class": "nav-link", "href": "#profile"}
+                    {"tag": "li", "class": "foot-item", "children": [
+                        {"tag": "a", "class": "foot-link", "href": "#profile", "text": "PROFILE"}
                     ]},
-                    {"tag": "li", "class": "nav-item", "children": [
-                        {"tag": "a", "class": "nav-link", "href": "#pick-up"}
+                    {"tag": "li", "class": "foot-item", "children": [
+                        {"tag": "a", "class": "foot-link", "href": "#pick-up", "text": "PICK UP"}
                     ]},
-                    {"tag": "li", "class": "nav-item", "children": [
-                        {"tag": "a", "class": "nav-link", "href": "#songs"}
+                    {"tag": "li", "class": "foot-item", "children": [
+                        {"tag": "a", "class": "foot-link", "href": "#songs", "text": "SONGS"}
                     ]},
-                    {"tag": "li", "class": "nav-item", "children": [
-                        {"tag": "a", "class": "nav-link", "href": "#news"}
+                    {"tag": "li", "class": "foot-item", "children": [
+                        {"tag": "a", "class": "foot-link", "href": "#news", "text": "NEWS"}
                     ]},
-                    {"tag": "li", "class": "nav-item", "children": [
-                        {"tag": "a", "class": "nav-link", "href": "#contact"}
+                    {"tag": "li", "class": "foot-item", "children": [
+                        {"tag": "a", "class": "foot-link", "href": "#contact", "text": "CONTACT"}
                     ]}
                 ]}
             ]}
         ]},
         {"tag": "span", "class": "copy", "text": "© WAZ VIDEO CREATE STUDIO"}
+    ],
+    "profileContent":[
+    {"tag": "article", "class": "pr-container", "children": [
+        {"tag": "h2", "class": "section-title", "text": "PROFILE"},
+        {"tag": "figure", "class": "pr-table", "children": [
+            {"tag": "img", "src": "https://dummyimage.com/250x400/000/fff", "alt": "dummy-img", "class": "character-img"},
+            {"tag": "figcaption", "class": "pr-caption", "children": [
+                {"tag": "div", "class": "name-block", "children": [
+                    {"tag": "h3", "class": "pr-name", "text": "速水らいむ"},
+                    {"tag": "div", "class": "parent-sub-name-block", "children": [
+                        {"tag": "p", "class": "pr-txt", "text": "はやみず らいむ"},
+                        {"tag": "p", "class": "pr-txt", "text": "HAYAMIZU Rhyme"}
+                    ]},
+                    {"tag": "div", "class": "section-border", "children": [
+                        {"tag": "h4", "class": "catch", "children": [
+                            {"tag": "p", "class": "pr-txt", "text": "「低音ボイスの黒髪ジトメッシュ"},
+                            {"tag": "p", "class": "pr-txt", "text": "はやみじゃないよ、はやみずだよ」"}
+                        ]}
+                    ]},
+                        {"tag": "p", "class": "pr-txt", "text": "歌をメインにゲーム実況や雑談も織り交ぜ活動している"},
+                        {"tag": "p", "class": "pr-txt", "text": "活動方針は歌ってみたや、ライブ出演を主としている。"}
+                    ]}
+                ]}
+            ]}
+        ]}
+    ],
+    "detailContent": [
+    {"tag": "div", "class": "content-header", "children": [
+        {"tag": "h3", "class": "content-title", "text": "DETAIL"}
+    ]},
+    {"tag": "article", "class": "content-container", "children": [
+        {"tag": "ul", "class": "content-list", "children": [
+            {"tag": "li", "class": "nav-item", "children": [
+                {"tag": "p", "class": "content-txt", "text": "好きなもの"},
+                {"tag": "span", "text": "歌 / 動物 / お酒 / お喋り / ミント系 / 柑橘類 / クリープハイプ"}
+            ]}
+        ]},
+        {"tag": "ul", "class": "content-list", "children": [
+            {"tag": "li", "class": "nav-item", "children": [
+                {"tag": "p", "class": "content-txt", "text": "得意"},
+                {"tag": "span", "text": "歌うこと"}
+            ]}
+        ]},
+        {"tag": "ul", "class": "content-list", "children": [
+            {"tag": "li", "class": "nav-item", "children": [
+                {"tag": "p", "class": "content-txt", "text": "配信開始日"},
+                {"tag": "span", "text": "2022年/12/21"}
+            ]}
+        ]},
+        {"tag": "ul", "class": "content-list", "children": [
+            {"tag": "li", "class": "nav-item", "children": [
+                {"tag": "p", "class": "content-txt", "text": "誕生日"},
+                {"tag": "span", "text": "西暦20XX年6月10日"}
+            ]}
+        ]},
+        {"tag": "ul", "class": "content-list", "children": [
+            {"tag": "li", "class": "nav-item", "children": [
+                {"tag": "p", "class": "content-txt", "text": "年齢"},
+                {"tag": "span", "text": "お酒が飲める"}
+            ]}
+        ]},
+        {"tag": "ul", "class": "content-list", "children": [
+            {"tag": "li", "class": "nav-item", "children": [
+                {"tag": "p", "class": "content-txt", "text": "イラストレーター"},
+                {"tag": "span", "children": [
+                    {"tag": "span", "text": "鮮血いあ:"},
+                    {"tag": "a", "href": "https://x.com/IA_IRASUTO", "text": "(https://x.com/IA_IRASUTO)"}
+                ]}
+            ]}
+        ]},
+        {"tag": "ul", "class": "content-list", "children": [
+            {"tag": "li", "class": "nav-item", "children": [
+                {"tag": "p", "class": "content-txt", "text": "ファンネーム"},
+                {"tag": "span", "text": "シトラメイト"}
+            ]}
+        ]},
+        {"tag": "ul", "class": "content-list", "children": [
+            {"tag": "li", "class": "nav-item", "children": [
+                {"tag": "p", "class": "content-txt", "text": "推しマーク"},
+                {"tag": "span", "text": "🎧🦎"}
+            ]}
+        ]},
+        {"tag": "div", "class": "tags", "children": [
+            {"tag": "div","class": "tags","children": [
+            {"tag": "p","class": "content-txt","text": "ハッシュタグ"},
+            {"tag": "ul","class": "content-list-hash","children": [
+                {"tag": "li","class": "content-item-small","children": [
+                    {"tag": "p","children": [
+                        {"tag": "span", "text": "エゴサ: "},
+                            {"tag": "a","href": "https://x.com/search?q=%23%E3%82%89%E3%81%84%E3%81%BF%E3%82%93%E3%81%9F%E3%81%84%E3%82%80","target": "_blank","text": "#らいみんたいむ"}
+                            ]}
+                        ]},
+                {"tag": "li","class": "content-item-small","children": [
+                    {"tag": "p","children": [
+                        {"tag": "span", "text": "配信: "},
+                            {"tag": "a","href": "https://x.com/search?q=%23%E3%82%89%E3%81%84%E3%82%80%E3%81%82%E3%82%89%E3%81%B6","target": "_blank","text": "#らいむあらいぶ"}
+                            ]}
+                        ]},
+                {"tag": "li","class": "content-item-small","children": [
+                    {"tag": "p","children": [
+                        {"tag": "span", "text": "ファンアート: "},
+                            {"tag": "a","href": "https://x.com/search?q=%23%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%82%89%E3%81%84%E3%82%80","target": "_blank","text": "#フリースタイルらいむ"}
+                            ]}
+                        ]}
+                    ]}
+                ]}
+            ]}
+        ]}
     ]
 }
+
