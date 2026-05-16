@@ -128,6 +128,13 @@ header
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    width: 100%;
+    max-width: fit-content;
+    
+    @media (min-width:820px) {
+        flex-direction: row;
+        margin: 0 auto;
+    }
 }
 
 .character-img {
@@ -139,6 +146,7 @@ header
 .pr-caption {
     text-align: left;
     width: 100%;
+    max-width: fit-content;
 }
 
 .name-block {
@@ -195,9 +203,15 @@ header
 .catch {
     text-align: left;
     width: fit-content;
-    margin: 0 auto 2em;
     font-size: 18px;
     font-weight: 700;
+    margin: 1.25rem 0;
+    
+    @media (min-width:800px) {
+        margin: 1rem auto;
+        font-size: 18px;
+        font-weight: 700;
+    }
 }
 
 .pr-txt {
@@ -428,29 +442,12 @@ header
         width: fit-content;
     }
 
-    .catch {
-        text-align: left;
-        width: fit-content;
-        margin: 0 0 1.25rem;
-        font-size: 18px;
-        font-weight: 700;
-    }
-
-    .pr-table {
-        display: flex;
-        flex-direction: row;
-        margin: 0 auto;
-    }
-
     .character-img {
         display: block;
+        width: 100%;
         width: 250px;
         height: auto;
         margin: 0 auto;
-    }
-
-    .pr-caption {
-        width: 100%;
     }
 
     .parent-sub-name-block {
