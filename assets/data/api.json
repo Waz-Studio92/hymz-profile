@@ -1,0 +1,64 @@
+{
+    "parts": [
+        {"id": "#sidebar", "callback": "setNav"},
+        {"id": "footer", "callback": "null"}
+    ],
+    "sideContent": [
+        {"tag": "nav", "class": "sidebar", "children": [
+            {"tag": "input", "type": "checkbox", "id": "nav-toggle", "class": "nav-toggle"},
+            {"tag": "label", "for": "nav-toggle", "class": "nav-btn", "aria-label": "open/close", "children": [
+                {"tag": "span"},{"tag": "span"},{"tag": "span"}
+            ]},
+            {"tag": "label", "for": "nav-toggle", "class": "nav-overlay"},
+            {"tag": "ul", "class": "nav-list", "children": [
+                {"tag": "li", "class": "nav-item", "children": [
+                    {"tag": "a", "class": "nav-link", "href": "#top"}
+                ]},
+                {"tag": "li", "class": "nav-item", "children": [
+                    {"tag": "a", "class": "nav-link", "href": "#profile"}
+                ]},
+                {"tag": "li", "class": "nav-item", "children": [
+                    {"tag": "a", "class": "nav-link", "href": "#pick-up"}
+                ]},
+                {"tag": "li", "class": "nav-item", "children": [
+                    {"tag": "a", "class": "nav-link", "href": "#songs"}
+                ]},
+                {"tag": "li", "class": "nav-item", "children": [
+                    {"tag": "a", "class": "nav-link", "href": "#news"}
+                ]},
+                {"tag": "li", "class": "nav-item", "children": [
+                    {"tag": "a", "class": "nav-link", "href": "#contact"}
+                ]}
+            ]}
+        ]}
+    ],
+    "footerContent": [
+        {"tag": "footer", "class": "footer", "children": [
+            {"tag": "a", "class": "foot-top-link", "children": [
+                {"tag": "img", "src": "assets/images/hymz-logo-mini.svg", "alt": "速水らいむロゴ"}
+            ]},
+            {"tag": "nav", "children": [
+                {"tag": "ul", "class": "nav-list", "children": [
+                    {"tag": "li", "class": "nav-item", "children": [
+                        {"tag": "a", "class": "nav-link", "href": "#top"}
+                    ]},
+                    {"tag": "li", "class": "nav-item", "children": [
+                        {"tag": "a", "class": "nav-link", "href": "#profile"}
+                    ]},
+                    {"tag": "li", "class": "nav-item", "children": [
+                        {"tag": "a", "class": "nav-link", "href": "#pick-up"}
+                    ]},
+                    {"tag": "li", "class": "nav-item", "children": [
+                        {"tag": "a", "class": "nav-link", "href": "#songs"}
+                    ]},
+                    {"tag": "li", "class": "nav-item", "children": [
+                        {"tag": "a", "class": "nav-link", "href": "#news"}
+                    ]},
+                    {"tag": "li", "class": "nav-item", "children": [
+                        {"tag": "a", "class": "nav-link", "href": "#contact"}
+                    ]}
+                ]}
+            ]}
+        ]}
+    ]
+}
