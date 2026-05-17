@@ -1,5 +1,5 @@
 //　#pick-up, #songs, #news を捕まえる。
-const target = document.querySelectorAll('#pick-up, #songs, #news');
+const target = document.querySelectorAll('#profile, #detail, #pick-up, #songs, #news');
 
 // 「画面に入ったらクラスをつける」
 const observer = new IntersectionObserver((entries) => {
