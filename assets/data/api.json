@@ -85,6 +85,20 @@
                     ]}
                 ]}
             ]}
+        ]},
+        {"tag": "div", "class": "link-container", "children": [
+            {"tag": "a", "class": "link-btn", "href": "https://www.youtube.com/@rhyme_hymz", "children": [
+                {"tag": "img", "class": "link-img", "src": "assets/images/yt-lg.svg", "alt": "YouTube ロゴ"},
+                {"tag": "p", "class": "link-txt", "text": "YouTube"}
+            ]},
+            {"tag": "a", "class": "link-btn", "href": "https://x.com/rhyme_hymz", "children": [
+                {"tag": "img", "class": "link-img", "src": "assets/images/x-logo.svg", "alt": "X ロゴ"},
+                {"tag": "p", "class": "link-txt", "text": "X"}
+            ]},
+            {"tag": "a", "class": "link-btn", "href": "https://profcard.info/u/1Qf9vjsGjEb5LbyWl0dJgzPO9xT2", "children": [
+                {"tag": "img", "class": "link-img", "src": "assets/images/card-logo.svg", "alt": "プロフカードロゴ"},
+                {"tag": "p", "class": "link-txt", "text": "プロフカード"}
+            ]}
         ]}
     ],
     "detailContent": [
