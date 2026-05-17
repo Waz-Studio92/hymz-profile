@@ -4,6 +4,7 @@ function createContent(item) {
     const el = document.createElement(tag);
 
     Object.assign(el, attrs);
+    if (src) el.src = src;
     if (id) el.id = id;
     // jsにおいてclassやforは仕様上使い回されるオブジェクトであるため 
     // class: classNameに変換 / for: htmlForに変換
@@ -46,5 +47,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     } catch (e) {
         console.error(e);
+
+        const errorBox = document.createElement('div');
+        errorBox.className = 'error-box';
+        errorBox.textContent = 'データの読み込みに失敗しました。時間を置いて再度お試しください。';
+
+        document.body.appendChild(errorBox);
     }
 });
