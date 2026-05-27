@@ -1,7 +1,5 @@
-//　#pick-up, #songs, #news を捕まえる。
 const target = document.querySelectorAll('#profile, #detail, #pick-up, #songs, #news');
 
-// 「画面に入ったらクラスをつける」
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -11,10 +9,9 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, {
-    threshold: .2 // 要素が20％ほど見えたら発火させる
+    threshold: .2
 });
 
-// ターゲット一つ一つに見張ると命令する。
 target.forEach(t => {
     observer.observe(t);
 });
