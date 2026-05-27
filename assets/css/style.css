@@ -315,13 +315,15 @@ header
 }
 
 .link-txt {
+    position: absolute;
     font-size: 13px;
     font-weight: 600;
+    left: 40%;
     z-index: 10;
 }
 
 .link-btn:hover .link-txt {
-    color: var(--text-color);
+    color: var(--txt-color);
 }
 
 /* ---------------
@@ -385,7 +387,7 @@ header
 .content-item span a::after {
     background-color: currentColor;
     position: absolute;
-    content: "";
+    content: '';
     left: 0;
     bottom: -2px;
     width: 100%;
@@ -426,7 +428,7 @@ header
 .content-item-small a::after {
     background-color: currentColor;
     position: absolute;
-    content: "";
+    content: '';
     left: 0;
     bottom: -2px;
     width: 100%;
@@ -453,6 +455,8 @@ header
 
 ------------------------ */
 
+#profile,
+#detail,
 #pick-up,
 #songs,
 #news {
@@ -462,13 +466,15 @@ header
 }
 
 #songs {
-    transition-delay: .2s;
+    transition-delay: .1s;
 }
 
 #news {
-    transition-delay: .4s;
+    transition-delay: .2s;
 }
 
+#profile.is-active,
+#detail.is-active,
 #pick-up.is-active,
 #songs.is-active,
 #news.is-active {
@@ -546,7 +552,7 @@ iframe {
     display: flex;
     flex-direction: row;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--txt-color);
     align-items: center;
     justify-content: center;
     width: fit-content;
@@ -566,7 +572,7 @@ iframe {
 .news-link {
     display: block;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--txt-color);
 }
 
 .time-txt {
@@ -594,6 +600,7 @@ time {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: fit-content;
     gap: .5em;
 }
 
